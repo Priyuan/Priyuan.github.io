@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshi Kumari | Quantum Computing & AI Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Animated Background Texture */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 8px),
+                repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 12px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Floating particles animation */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+            animation: floatParticles 20s ease-in-out infinite;
+        }
+
+        @keyframes floatParticles {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.5; }
+            50% { transform: translate(20px, 20px) rotate(5deg); opacity: 0.8; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Glass Morphism Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 50px;
+            padding: 16px 32px;
+            margin: 24px auto;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            justify-content: flex-end;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 50px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 60px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 60px 0 30px;
+            background: linear-gradient(135deg, #fff, #e0e0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+            border-radius: 2px;
+        }
+
+        /* Research Cards - 3D Hover Effect */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .research-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .research-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .research-card:hover::before {
+            left: 100%;
+        }
+
+        .research-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .research-number {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .research-card h3 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .research-card p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        /* Publications Section */
+        .publications-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .publication-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+            border-left: 5px solid;
+            cursor: pointer;
+        }
+
+        .publication-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .publication-card.accepted {
+            border-left-color: #4CAF50;
+        }
+
+        .publication-card.review {
+            border-left-color: #FF9800;
+        }
+
+        .pub-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .publication-card.accepted .pub-status {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .publication-card.review .pub-status {
+            background: #FF9800;
+            color: white;
+        }
+
+        .publication-card h4 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .pub-authors {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .pub-venue {
+            color: #f093fb;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .pub-abstract {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .exp-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .exp-card:hover {
+            transform: scale(1.01);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .exp-icon {
+            font-size: 40px;
+        }
+
+        .exp-content {
+            flex: 1;
+        }
+
+        .exp-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .exp-company {
+            color: #f093fb;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .exp-date {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .exp-description {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: #f093fb;
+            transform: scale(1.05);
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .achievement-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .achievement-item i {
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .achievement-item span {
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 40px;
+            margin: 60px 0 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-links a:hover {
+            background: #f093fb;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .hero {
+                padding: 30px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+            
+            .research-card {
+                padding: 20px;
+            }
+            
+            .exp-card {
+                flex-direction: column;
+            }
+        }
+
+        /* Scroll animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .research-card, .publication-card, .exp-card, .skill-card, .achievement-item {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .research-card:nth-child(1) { animation-delay: 0.1s; }
+        .research-card:nth-child(2) { animation-delay: 0.2s; }
+        .research-card:nth-child(3) { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Priyanshi Kumari</h1>
+            <div class="title">🔬 Quantum Computing Researcher | AI/ML Engineer</div>
+            <p>Computer Science Undergrad @ KIIT | Minor in Quantum Computing<br>
+            Research experience at University of Cambridge, Robert Gordon University, and University of Greenwich<br>
+            🏆 Tata Steel Millennium Scholar | EY Techathon 6.0 Semi-finalist</p>
+        </div>
+
+        <!-- Current Research Areas -->
+        <h2 id="research">🔬 Current Research Areas</h2>
+        <div class="research-grid">
+            <div class="research-card">
+                <div class="research-number">01</div>
+                <h3>Quantum Machine Learning</h3>
+                <p>Applying quantum algorithms to classical ML problems, focusing on dynamic resource allocation using hybrid quantum-classical approaches. Exploring quantum cryptography for secure AI systems in agriculture and healthcare.</p>
+            </div>
+            <div class="research-card">
+                <div class="research-number">02</div>
+                <h3>Physics-Informed Neural Networks</h3>
+                <p>Incorporating physical constraints into neural architectures for stable long-term forecasting in mental health and medical applications. Developing Hamiltonian GNNs for temporal dynamics.</p>
+            </div>
+            <div class="research-card">
+                <div class="research-number">03</div>
+                <h3>Computer Vision for Healthcare</h3>
+                <p>Building vision models for early cancer detection (breast cancer, PCOS), disease detection in plants, and defect detection in manufacturing (WAAM). Integrating causal inference for robust predictions.</p>
+            </div>
+        </div>
+
+        <!-- Research & Publications -->
+        <h2 id="publications">📄 Research & Publications</h2>
+        <div class="publications-grid">
+            <div class="publication-card accepted">
+                <div class="pub-status">✓ ACCEPTED</div>
+                <h4>Prediction of Homelessness in Aberdeen Using Machine Learning Algorithms</h4>
+                <div class="pub-authors">Priyanshi Kumari, Dr. Shahana Bano</div>
+                <div class="pub-venue">MAiTRI 2026 Conference</div>
+                <div class="pub-abstract">84% accuracy predicting homelessness risk factors in Aberdeen, Scotland using demographic, economic, and housing data.</div>
+            </div>
+
+            <div class="publication-card review">
+                <div class="pub-status">⟳ UNDER REVIEW</div>
+                <h4>Physics-Aware Port-Hamiltonian Graph Neural Controlled Differential Equations for Stable Student Stress Forecasting</h4>
+                <div class="pub-authors">Priyanshi Kumari, Dr. Zhongtian Sun</div>
+                <div class="pub-venue">IEEE ICASSP 2026</div>
+                <div class="pub-abstract">Physics-informed neural networks for stable mental health forecasting over long time horizons on the StudentLife dataset.</div>
+            </div>
+
+            <div class="publication-card review">
+                <div class="pub-status">⟳ UNDER REVIEW</div>
+                <h4>Empowering Vertical Farming with Artificial Intelligence and IoT</h4>
+                <div class="pub-authors">Priyanshi Kumari, Dr. Razia Sulthana</div>
+                <div class="pub-venue">Computers and Electronics in Agriculture (Elsevier)</div>
+                <div class="pub-abstract">Computer vision, digital twins, reinforcement learning, and quantum cryptography for smart agriculture systems.</div>
+            </div>
+
+            <div class="publication-card review">
+                <div class="pub-status">⟳ UNDER REVIEW</div>
+                <h4>Signal Processing on Red Pitaya Using Verilog: Trapezoid and Boxcar Filters</h4>
+                <div class="pub-authors">Priyanshi Kumari</div>
+                <div class="pub-venue">Undergraduate Research Journal</div>
+                <div class="pub-abstract">Implementation of trapezoid and boxcar filters for real-time signal processing on Red Pitaya FPGA using Verilog.</div>
+            </div>
+
+            <div class="publication-card accepted">
+                <div class="pub-status">✓ POSTER PRESENTATION</div>
+                <h4>Machine Learning for Women's Health: Detecting Breast Cancer & PCOS</h4>
+                <div class="pub-authors">Priyanshi Kumari, Dr. Diwakar Tripathi</div>
+                <div class="pub-venue">AHFE International Conference</div>
+                <div class="pub-abstract">Machine learning models for early detection of breast cancer and polycystic ovary syndrome (PCOS).</div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <h2 id="experience">💼 Research Experience</h2>
+        <div class="experience-grid">
+            <div class="exp-card">
+                <div class="exp-icon">🔬</div>
+                <div class="exp-content">
+                    <div class="exp-title">Research Intern</div>
+                    <div class="exp-company">University of Cambridge</div>
+                    <div class="exp-date">April 2026 - Present</div>
+                    <div class="exp-description">Working on representation learning for early prediction of cancer in women using multi-modal medical data.</div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-icon">🤖</div>
+                <div class="exp-content">
+                    <div class="exp-title">Research Intern</div>
+                    <div class="exp-company">Robert Gordon University</div>
+                    <div class="exp-date">October 2025 - Present</div>
+                    <div class="exp-description">Developed deep learning vision models (CNN and transformer-based) for defect detection in Wire Arc Additive Manufacturing (WAAM), integrating causal inference frameworks. Multiple papers under review.</div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-icon">🌱</div>
+                <div class="exp-content">
+                    <div class="exp-title">Research Intern</div>
+                    <div class="exp-company">University of Greenwich</div>
+                    <div class="exp-date">September 2025 - Present</div>
+                    <div class="exp-description">AI-enabled vertical farming with computer vision, digital twins, and reinforcement learning. Developing biology-inspired vision models for disease detection.</div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-icon">🧠</div>
+                <div class="exp-content">
+                    <div class="exp-title">Research Collaborator</div>
+                    <div class="exp-company">Kent & Medway Medical School</div>
+                    <div class="exp-date">May 2025 - September 2025</div>
+                    <div class="exp-description">Explored physics-informed Hamiltonian Dynamics with graph neural networks for mental health forecasting. Paper submitted to IEEE ICASSP 2026.</div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <div class="exp-icon">⚡</div>
+                <div class="exp-content">
+                    <div class="exp-title">Research Intern</div>
+                    <div class="exp-company">University of Kentucky</div>
+                    <div class="exp-date">June 2024 - April 2025</div>
+                    <div class="exp-description">Implemented trapezoid and boxcar filters for real-time signal processing on Red Pitaya FPGA using Verilog and NumPy.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <h2 id="skills">⚙️ Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">⚛️</div>
+                <h3>Quantum Computing</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Qiskit</span>
+                    <span class="skill-tag">Quantum Algorithms</span>
+                    <span class="skill-tag">Quantum Cryptography</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🧠</div>
+                <h3>AI & Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">Graph Neural Networks</span>
+                    <span class="skill-tag">Reinforcement Learning</span>
+                    <span class="skill-tag">Causal Inference</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Hardware & FPGA</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Verilog</span>
+                    <span class="skill-tag">Red Pitaya</span>
+                    <span class="skill-tag">Digital Signal Processing</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🐍</div>
+                <h3>Programming</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">TensorFlow/PyTorch</span>
+                    <span class="skill-tag">Weka Tool</span>
+                    <span class="skill-tag">Game Development</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <h2>🏆 Honors & Awards</h2>
+        <div class="achievements-grid">
+            <div class="achievement-item"><i>🏅</i><br><span>Tata Steel Millennium Scholarship 2024</span></div>
+            <div class="achievement-item"><i>🚀</i><br><span>EY Techathon 6.0 - Semi-finalist</span></div>
+            <div class="achievement-item"><i>🎯</i><br><span>Highest in Hindi Hackathon - TECHNICA</span></div>
+            <div class="achievement-item"><i>📚</i><br><span>Prabhat Khabar Pratibha Saman</span></div>
+            <div class="achievement-item"><i>🏛️</i><br><span>Tata Crucible Quiz</span></div>
+            <div class="achievement-item"><i>💜</i><br><span>Myntra Hackerramp We for She 2024</span></div>
+        </div>
+
+        <!-- Education -->
+        <h2>🎓 Education</h2>
+        <div class="experience-grid">
+            <div class="exp-card">
+                <div class="exp-icon">🎓</div>
+                <div class="exp-content">
+                    <div class="exp-title">Bachelor of Technology - Computer Science & Engineering</div>
+                    <div class="exp-company">KIIT - Kalinga Institute of Industrial Technology</div>
+                    <div class="exp-date">2023 - 2027</div>
+                    <div class="exp-description">Minor in Quantum Computing</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="contact">
+            <div class="footer-links">
+                <a href="mailto:priyanshi140011@gmail.com">✉️ Email</a>
+                <a href="https://www.linkedin.com/in/priyanshi-kumari-ab22242b3/">🔗 LinkedIn</a>
+                <a href="https://github.com/Priyuan">🐙 GitHub</a>
+                <a href="https://www.researchgate.net/profile/Priyanshi-Kumari-4">📚 ResearchGate</a>
+                <a href="https://scholar.google.com">🎓 Google Scholar</a>
+            </div>
+            <p style="color: rgba(255,255,255,0.7);">🚀 Actively seeking Summer 2026 Research Internship in AI/ML, Computer Vision, or Embodied Intelligence</p>
+            <p style="color: rgba(255,255,255,0.5); margin-top: 20px;">© 2026 Priyanshi Kumari. Built with 💜 for Quantum Computing & AI Research</p>
+        </footer>
+    </div>
+</body>
+</html>
