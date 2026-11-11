@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Priyanshi Kumari – AI/ML Researcher | Quantum Computing, Computer Vision, Reinforcement Learning</title>
+  <meta name="description" content="Priyanshi Kumari is a final-year Computer Science undergraduate at KIIT University researching AI, machine learning, quantum computing, computer vision and reinforcement learning.">
+  <meta name="author" content="Priyanshi Kumari">
+  <link rel="canonical" href="https://priyuan.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Priyanshi Kumari – AI/ML Researcher">
+  <meta property="og:description" content="Research in AI, quantum computing, computer vision and reinforcement learning.">
+  <meta property="og:url" content="https://priyuan.github.io/">
+  <meta property="og:image" content="https://priyuan.github.io/photo.jpg">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚛️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Priyanshi Kumari","url":"https://priyuan.github.io/","image":"https://priyuan.github.io/photo.jpg","email":"mailto:priyanshi140011@gmail.com","jobTitle":"Undergraduate Researcher in AI and Machine Learning","alumniOf":{"@type":"CollegeOrUniversity","name":"Kalinga Institute of Industrial Technology (KIIT)"},"knowsAbout":["Artificial Intelligence","Machine Learning","Quantum Computing","Computer Vision","Reinforcement Learning","Human-AI Interaction"],"sameAs":["https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en","https://www.linkedin.com/in/priyanshikumari-ab22242b3","https://github.com/Priyuan"]}
+  </script>
+  <style>
+    /* ----- Rodosingh-inspired, refined template ----- */
+    :root {
+      --bg: #fbfbf9;
+      --surface: #ffffff;
+      --ink: #1a1f2b;
+      --muted: #5a6478;
+      --line: #e6e8ee;
+      --accent: #2f5e9c;
+      --accent-soft: #eef3fb;
+      --highlight: #f5f7fc;
+      --serif: "Source Serif 4", Georgia, serif;
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+      --radius: 12px;
+      --shadow-sm: 0 4px 16px -8px rgba(20, 30, 55, 0.15);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #11151f;
+        --surface: #1a1f2e;
+        --ink: #edf0f8;
+        --muted: #a2adc9;
+        --line: #2c3348;
+        --accent: #8fb6f0;
+        --accent-soft: #1e2a42;
+        --highlight: #20273b;
+        --shadow-sm: 0 4px 16px -8px rgba(0, 0, 0, 0.5);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 78px; color-scheme: light dark; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16.5px/1.7 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+    /* ----- top bar ----- */
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar-inner {
+      max-width: 980px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px; gap: 20px;
+    }
+    .brand {
+      font: 700 19px var(--serif); color: var(--ink); text-decoration: none;
+      white-space: nowrap; letter-spacing: -0.01em;
+    }
+    .topbar nav { display: flex; gap: 26px; overflow-x: auto; font-size: 14.5px; font-weight: 500; }
+    .topbar nav a {
+      color: var(--muted); text-decoration: none; white-space: nowrap;
+      padding: 4px 0; border-bottom: 2px solid transparent; transition: color .15s, border-color .15s;
+    }
+    .topbar nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    @media (max-width: 760px) {
+      .brand { display: none; }
+      .topbar nav { font-size: 13.5px; gap: 16px; }
+    }
+
+    /* ----- layout ----- */
+    .page { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+    /* ----- hero (rodosingh style: compact, warm) ----- */
+    .hero {
+      display: grid; grid-template-columns: 200px 1fr; gap: 42px;
+      padding: 56px 0 40px; align-items: center;
+    }
+    .hero-img {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top;
+      border-radius: 14px; border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-content .greeting {
+      font: 600 13px var(--sans); letter-spacing: .12em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 10px;
+    }
+    .hero-content h1 {
+      font: 700 clamp(34px, 5vw, 46px)/1.08 var(--serif);
+      margin: 0 0 8px; letter-spacing: -0.02em;
+    }
+    .hero-content .subtitle {
+      font-size: 17.5px; margin: 0 0 4px; color: var(--muted);
+    }
+    .hero-content .role-line {
+      font-size: 16px; color: var(--muted); margin: 0 0 14px;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 14px; }
+    .chip {
+      font-size: 13px; font-weight: 500; background: var(--accent-soft); color: var(--accent);
+      padding: 4px 14px; border-radius: 99px; border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+    }
+    .quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn {
+      display: inline-block; padding: 9px 20px; border-radius: 8px; font-weight: 500;
+      font-size: 14.5px; text-decoration: none; border: 1px solid var(--accent);
+      transition: background .15s, color .15s, filter .15s;
+    }
+    .btn.primary { background: var(--accent); color: var(--bg); }
+    .btn:hover { filter: brightness(1.08); }
+    .btn.primary:hover { background: color-mix(in srgb, var(--accent) 85%, black); }
+
+    /* ----- sections ----- */
+    section {
+      padding: 42px 0 36px;
+      border-top: 1px solid var(--line);
+    }
+    section:first-of-type { border-top: 0; }
+    h2 {
+      font: 700 27px/1.25 var(--serif); margin: 0 0 22px; letter-spacing: -0.01em;
+    }
+    h3 {
+      font: 600 17.5px/1.4 var(--serif); margin: 0;
+    }
+    .lead {
+      font: 400 20px/1.6 var(--serif); margin: 0 0 16px; color: var(--ink);
+    }
+
+    /* ----- highlight cards ----- */
+    .hl {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 14px; margin-top: 26px;
+    }
+    .card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card b {
+      display: block; font: 700 26px var(--serif); color: var(--accent);
+      margin-bottom: 2px; letter-spacing: -0.01em;
+    }
+    .card span { font-size: 14px; color: var(--muted); }
+
+    /* ----- publications list (rodosingh-style stacked, less boxy) ----- */
+    .pub-group-title {
+      font: 600 14px var(--sans); letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); margin: 30px 0 14px;
+    }
+    .pub-list { list-style: none; padding: 0; margin: 0; }
+    .pub-item {
+      padding: 18px 0 16px;
+      border-bottom: 1px solid var(--line);
+      display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; align-items: start;
+    }
+    .pub-item:last-child { border-bottom: 0; }
+    .pub-title { font-weight: 600; font-size: 16.5px; line-height: 1.4; margin: 0 0 4px; }
+    .pub-authors { font-size: 14.5px; color: var(--muted); margin: 0 0 2px; }
+    .pub-venue { font-size: 14.5px; color: var(--muted); margin: 0; }
+    .pub-venue strong { color: var(--ink); font-weight: 500; }
+    .pub-links { margin: 6px 0 0; font-size: 14px; }
+    .pub-links a { font-weight: 500; }
+
+    .badge {
+      display: inline-block; font-size: 12px; font-weight: 600;
+      padding: 2px 11px; border-radius: 99px; white-space: nowrap;
+      line-height: 1.6;
+    }
+    .badge.accepted { background: #dcfce7; color: #166534; }
+    .badge.review { background: #fef3c7; color: #92400e; }
+    .badge.submitted { background: #e0e7ff; color: #3730a3; }
+    @media (prefers-color-scheme: dark) {
+      .badge.accepted { background: #14351f; color: #86efac; }
+      .badge.review { background: #3a2b0b; color: #fcd34d; }
+      .badge.submitted { background: #1e1b4b; color: #a5b4fc; }
+    }
+
+    /* ----- experience rows (clean timeline) ----- */
+    .exp-row {
+      display: grid; grid-template-columns: 160px 1fr; gap: 24px;
+      padding: 18px 0; border-bottom: 1px solid var(--line);
+    }
+    .exp-row:last-child { border-bottom: 0; }
+    .exp-when { font-size: 14.5px; font-weight: 500; color: var(--muted); }
+    .exp-org { font-weight: 600; font-size: 17px; margin: 0 0 2px; font-family: var(--serif); }
+    .exp-role { font-size: 15px; color: var(--accent); font-weight: 500; margin: 0 0 4px; }
+    .exp-desc { font-size: 15.5px; margin: 0; color: var(--ink); }
+    @media (max-width: 680px) {
+      .exp-row { grid-template-columns: 1fr; gap: 4px; }
+      .exp-when { font-size: 13.5px; }
+    }
+
+    /* ----- honors list ----- */
+    ul.l { padding-left: 20px; margin: 0; }
+    ul.l li { margin-bottom: 10px; font-size: 16px; }
+
+    /* ----- footer ----- */
+    footer {
+      border-top: 1px solid var(--line); padding: 30px 0 50px;
+      font-size: 14px; color: var(--muted); text-align: center;
+    }
+    footer a { color: var(--accent); }
+
+    /* ----- responsive hero ----- */
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; gap: 26px; padding-top: 36px; }
+      .hero-img { max-width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#top">Priyanshi Kumari</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page" id="top">
+
+  <!-- ================= HERO ================= -->
+  <div class="hero">
+    <img class="hero-img" src="photo.jpg" width="625" height="820" alt="Portrait of Priyanshi Kumari">
+    <div class="hero-content">
+      <p class="greeting">Hey Voila!</p>
+      <h1>Priyanshi Kumari</h1>
+      <p class="subtitle">B.Tech Computer Science and Engineering, KIIT University (2023–2027)</p>
+      <p class="role-line">Minor in Quantum Computing · Research with Cambridge, Greenwich, Robert Gordon, IIT Kharagpur, Kent and Kentucky</p>
+
+      <div class="chips">
+        <span class="chip">Quantum Computing</span>
+        <span class="chip">Computer Vision</span>
+        <span class="chip">Reinforcement Learning</span>
+        <span class="chip">Human-AI Interaction</span>
+        <span class="chip">Embodied Intelligence</span>
+      </div>
+
+      <p style="margin:6px 0 0;"><a href="mailto:priyanshi140011@gmail.com">priyanshi140011@gmail.com</a></p>
+
+      <div class="quick-links">
+        <a class="btn primary" href="#publications">Publications</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="https://www.linkedin.com/in/priyanshikumari-ab22242b3" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Priyuan" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <h2>About</h2>
+    <p class="lead">I build AI systems that stay stable, efficient and useful outside the lab — from quantum algorithms to medical imaging to greenhouse control.</p>
+    <p>I am a final-year undergraduate whose research spans Artificial Intelligence, Machine Learning, Computer Vision, Human-AI Interaction, Reinforcement Learning and Embodied Intelligence. I work with groups in the UK, US and India on physics-informed learning, quantum algorithms for imagery and healthcare, lightweight models for resource-constrained settings, and AI for agriculture and manufacturing. I am seeking research internships and collaborations on publication-oriented problems with real-world impact.</p>
+
+    <div class="hl">
+      <div class="card"><b>11</b><span>Papers and posters</span></div>
+      <div class="card"><b>5</b><span>Currently under review</span></div>
+      <div class="card"><b>Best Paper</b><span>In session, IEEE IMSA, Egypt</span></div>
+      <div class="card"><b>1,000+</b><span>Students trained in DSA</span></div>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <h3 class="pub-group-title">Accepted and published</h3>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">A Lightweight CNN for Pleural Effusion Localisation and Multi-Class Chest X-Ray Classification in Resource-Constrained Settings</p>
+          <p class="pub-venue">IEEE IMSA Conference, Giza, Egypt · <strong>Best Paper in Session</strong></p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge accepted">Accepted</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">Towards Self Explaining WAAM Systems: From Causal Graph Discovery to Vision Interpretation in Weld Dynamics</p>
+          <p class="pub-authors">Priyanshi Kumari, Shahana Bano, Anil Prathuru, Somasundar Kannan, Sagar Nikam, Deepika Nikam, Shiva Sekar</p>
+          <p class="pub-venue"><strong>IJAMT</strong></p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge accepted">Accepted</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">An Intelligent Approach for Predicting Precision Machining of Wire EDM Process Using Machine Learning</p>
+          <p class="pub-authors">Shahana Bano, Priyanshi Kumari, Priyanshu Mishra, Taimoor Asim, Muhammad Younas</p>
+          <p class="pub-venue"><strong>JMMP</strong></p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge accepted">Accepted</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">Empowering Sustainable Vertical Farming Through IoT and AI-Driven Technologies: A Technical Blueprint with Insights from the UK and India</p>
+          <p class="pub-authors">Priyanshi Kumari, Razia Sulthana Abdul Kareem</p>
+          <p class="pub-venue"><strong>Ecological Informatics</strong></p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge accepted">Accepted</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">Machine learning for women's health: detecting breast cancer and PCOS</p>
+          <p class="pub-venue">AHFE International Conference on Applied Human Factors and Ergonomics (poster)</p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge accepted">Accepted</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">Dynamic Resource Allocation using Quantum Algorithm and Game Theoretic Approach</p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge accepted">Published</span>
+      </li>
+    </ul>
+
+    <h3 class="pub-group-title">Under review and submitted</h3>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">An Open-Source Interactive Processor and Dual-Branch Fusion Model for Sentinel-2 Land-Suitability Mapping</p>
+          <p class="pub-authors">Priyanshi Kumari, Razia Sulthana Abdul Kareem</p>
+          <p class="pub-venue">AAAI IAAI-27 (Thirty-Ninth Annual Conference on Innovative Applications of Artificial Intelligence)</p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge review">Under review</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">Quantum neural network for lung nodule detection</p>
+          <p class="pub-venue"><strong>Quantum Machine Intelligence</strong></p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge review">Under review</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">Reinforcement learning for greenhouse climate control and optimization</p>
+          <p class="pub-venue">With Dr Shahana Bano, Robert Gordon University</p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge review">Under review</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">An open-source Python package for satellite imagery using quantum algorithms</p>
+          <p class="pub-venue">ICPRAM 2027</p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge review">Under review</span>
+      </li>
+      <li class="pub-item">
+        <div>
+          <p class="pub-title">Physics-Aware Port-Hamiltonian Graph Neural Controlled Differential Equations for Stable Student Stress Forecasting</p>
+          <p class="pub-venue">ICASSP 2026</p>
+          <p class="pub-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en">Google Scholar</a></p>
+        </div>
+        <span class="badge submitted">Submitted</span>
+      </li>
+    </ul>
+
+    <p style="margin-top:22px;">
+      <a class="btn primary" href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">View all on Google Scholar</a>
+    </p>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience">
+    <h2>Research experience</h2>
+
+    <div class="exp-row">
+      <div class="exp-when">Apr 2026 – Sep 2026</div>
+      <div>
+        <p class="exp-org">University of Cambridge</p>
+        <p class="exp-role">Research Intern</p>
+        <p class="exp-desc">Representation learning for early prediction of cancer in women.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">Jun 2026 – Aug 2026</div>
+      <div>
+        <p class="exp-org">QRACE – Quantum Research and Centre of Excellence</p>
+        <p class="exp-role">Quantum Research Intern</p>
+        <p class="exp-desc">Proposed a new quantum algorithm for NP-hard combinatorial problems.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">Oct 2025 – present</div>
+      <div>
+        <p class="exp-org">Robert Gordon University</p>
+        <p class="exp-role">Research Intern · Dr Shahana Bano</p>
+        <p class="exp-desc">Causal inference for WAAM, physics-based optimization for EDM, and reinforcement learning for greenhouse climate control.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">Sep 2025 – present</div>
+      <div>
+        <p class="exp-org">University of Greenwich</p>
+        <p class="exp-role">Research Intern · Dr Razia Sulthana</p>
+        <p class="exp-desc">Lightweight medical imaging, quantum algorithms for satellite imagery and lung nodule detection, AI-enabled vertical farming.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">Ongoing</div>
+      <div>
+        <p class="exp-org">IIT Kharagpur</p>
+        <p class="exp-role">Research · Dr Ritesh Sarkhel</p>
+        <p class="exp-desc">Self-playing agents and learning-based approaches for intelligent agent systems.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">Jun 2025 – Oct 2025</div>
+      <div>
+        <p class="exp-org">Thirsty Swan AI Labs, Hyderabad</p>
+        <p class="exp-role">Research Intern · Dr Prudviraj</p>
+        <p class="exp-desc">Vision-language models with knowledge-graph tracking to identify disease symptoms from images extracted from arXiv papers using OCR.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">May 2025 – Sep 2025</div>
+      <div>
+        <p class="exp-org">University of Kent, Kent and Medway Medical School</p>
+        <p class="exp-role">Undergraduate Research Collaborator · Dr Zhongtian Sun, Dr Chee Siang Ang</p>
+        <p class="exp-desc">Physics-informed networks for student mental health prediction on the Dartmouth student life dataset. The model stayed stable in long-horizon rollouts while non-physics-informed baselines diverged; benchmarked against GRU, GCN and GAT.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">Dec 2024 – May 2025</div>
+      <div>
+        <p class="exp-org">NIT Jamshedpur</p>
+        <p class="exp-role">Research Intern · Dr Diwakar Tripathi</p>
+        <p class="exp-desc">Machine learning for women's health: breast cancer and PCOS.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">Jun 2024 – Apr 2025</div>
+      <div>
+        <p class="exp-org">University of Kentucky</p>
+        <p class="exp-role">Research Intern · Dr Christopher Crawford</p>
+        <p class="exp-desc">Designed a trapezoidal filter from convolutions of existing filters; implemented in Verilog on the Red Pitaya FPGA and in NumPy.</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">May 2024 – Jun 2024</div>
+      <div>
+        <p class="exp-org">Grade Up Assignment</p>
+        <p class="exp-role">Subject Matter Expert</p>
+        <p class="exp-desc">Trained 1,000+ students in data structures, algorithms and competitive programming.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="exp-row">
+      <div class="exp-when">2023 – 2027</div>
+      <div>
+        <p class="exp-org">KIIT – Kalinga Institute of Industrial Technology</p>
+        <p class="exp-role">B.Tech, Computer Science and Engineering · Minor in Quantum Computing</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">2021 – 2023</div>
+      <div>
+        <p class="exp-org">DAV Public School, Bistupur, Jamshedpur</p>
+        <p class="exp-role">Std 12 · Physics, Chemistry, Mathematics, Biology</p>
+      </div>
+    </div>
+    <div class="exp-row">
+      <div class="exp-when">2008 – 2021</div>
+      <div>
+        <p class="exp-org">Sacred Heart Convent School, Jamshedpur</p>
+        <p class="exp-role">Std 10</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HONORS ================= -->
+  <section id="honors">
+    <h2>Honors, certifications and skills</h2>
+    <ul class="l">
+      <li>Best Paper in Session, IEEE IMSA Conference, Giza, Egypt (and Certificate of Appreciation)</li>
+      <li>Tata Steel Millennium Scholarship, 2024</li>
+      <li>Semi-finalist, EY Techathon 6.0 · Flipkart Runway Season 5</li>
+      <li>Prabhat Khabar Pratibha Samman for performance in classes 10 and 12</li>
+      <li>GIAC Python Coder (GPYC) · Health Systems Development: Introduction to Health Systems</li>
+      <li>Skills: Quantum Computing, Game Development, Weka · Languages: English (full professional), Hindi (native), German (elementary)</li>
+    </ul>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Open to research internships and collaborations in AI/ML. Email <a href="mailto:priyanshi140011@gmail.com">priyanshi140011@gmail.com</a>, or find me on <a href="https://www.linkedin.com/in/priyanshikumari-ab22242b3" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://github.com/Priyuan" target="_blank" rel="noopener">GitHub</a> and <a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </section>
+
+  <footer>
+    © 2026 Priyanshi Kumari
+  </footer>
+
+</div>
+</body>
+</html>
