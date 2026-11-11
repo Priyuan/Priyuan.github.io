@@ -21,10 +21,6 @@
   {"@context":"https://schema.org","@type":"Person","name":"Priyanshi Kumari","url":"https://priyuan.github.io/","image":"https://priyuan.github.io/photo.jpg","email":"mailto:priyanshi140011@gmail.com","jobTitle":"Undergraduate Researcher in AI and Machine Learning","alumniOf":{"@type":"CollegeOrUniversity","name":"Kalinga Institute of Industrial Technology (KIIT)"},"knowsAbout":["Artificial Intelligence","Machine Learning","Quantum Computing","Computer Vision","Reinforcement Learning","Human-AI Interaction","Embodied Intelligence"],"sameAs":["https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en","https://www.linkedin.com/in/priyanshikumari-ab22242b3","https://github.com/Priyuan"]}
   </script>
   <style>
-    /* ============================================================
-       PRIYANSHI'S PORTFOLIO — a unique take on rodosingh.github.io
-       Palette: warm paper, deep ink, brass accent, subtle grid
-       ============================================================ */
     :root {
       --paper: #f7f5ef;
       --paper-2: #efece3;
@@ -68,7 +64,6 @@
       font-size: 16.5px;
       line-height: 1.68;
       -webkit-font-smoothing: antialiased;
-      /* subtle paper grain via repeating gradient */
       background-image:
         repeating-linear-gradient(0deg, transparent 0 39px, color-mix(in srgb, var(--rule) 14%, transparent) 39px 40px),
         repeating-linear-gradient(90deg, transparent 0 39px, color-mix(in srgb, var(--rule) 14%, transparent) 39px 40px);
@@ -78,7 +73,6 @@
     a:hover { color: var(--brass); }
     a:focus-visible { outline: 2.5px solid var(--brass); outline-offset: 3px; border-radius: 3px; }
 
-    /* ---------- top bar ---------- */
     .topbar {
       position: sticky; top: 0; z-index: 20;
       background: color-mix(in srgb, var(--paper) 88%, transparent);
@@ -110,10 +104,8 @@
       .topbar nav a { padding: 6px 8px; font-size: 13px; }
     }
 
-    /* ---------- page ---------- */
     .page { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 
-    /* ---------- hero ---------- */
     .hero {
       display: grid;
       grid-template-columns: 230px 1fr;
@@ -166,7 +158,6 @@
       font: 400 15px var(--font-mono); color: var(--muted); margin: 0 0 20px;
     }
 
-    /* research tags */
     .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
     .tags li {
       font: 500 13px var(--font-body);
@@ -196,7 +187,6 @@
       .hero-photo-wrap::before { inset: -7px -7px 7px 7px; }
     }
 
-    /* ---------- intro strip ---------- */
     .intro {
       border-top: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
@@ -209,7 +199,6 @@
     .intro p { margin: 0; }
     .intro em { color: var(--brass); font-style: normal; font-weight: 500; }
 
-    /* ---------- section scaffolding ---------- */
     section { padding: 52px 0 40px; border-bottom: 1px solid var(--rule); }
     section:last-of-type { border-bottom: 0; }
     .sec-head {
@@ -226,7 +215,6 @@
     }
     .sec-head .hint { font: 400 13.5px var(--font-mono); color: var(--muted); }
 
-    /* ---------- about ---------- */
     .about-grid {
       display: grid; grid-template-columns: 1fr 260px; gap: 44px; align-items: start;
     }
@@ -252,7 +240,6 @@
       .stats { grid-template-columns: 1fr 1fr; }
     }
 
-    /* ---------- publications ---------- */
     .pub-filter {
       display: flex; gap: 6px; margin-bottom: 22px; flex-wrap: wrap;
     }
@@ -292,7 +279,6 @@
     .tag-badge.rev { background: var(--brass-soft); color: var(--brass); }
     .tag-badge.sub { background: var(--plum-soft); color: var(--plum); }
 
-    /* ---------- experience timeline ---------- */
     .timeline { position: relative; padding-left: 26px; }
     .timeline::before {
       content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px;
@@ -312,7 +298,6 @@
     .tl-role { font: 500 14.5px var(--font-body); color: var(--teal); margin: 0 0 5px; }
     .tl-desc { font-size: 15.5px; color: var(--ink-soft); margin: 0; max-width: 62ch; }
 
-    /* ---------- education (cards) ---------- */
     .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
     .edu-card {
       background: var(--paper-2); border: 1px solid var(--rule); border-radius: 12px;
@@ -323,7 +308,6 @@
     .edu-card .e-org { font: 600 17px var(--font-display); margin: 0 0 3px; }
     .edu-card .e-role { font: 400 14px var(--font-body); color: var(--muted); margin: 0; }
 
-    /* ---------- honors ---------- */
     .honors { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; }
     .honor-item {
       display: flex; gap: 12px; padding: 13px 0; border-bottom: 1px dashed var(--rule);
@@ -336,7 +320,6 @@
     }
     @media (max-width: 680px) { .honors { grid-template-columns: 1fr; } }
 
-    /* ---------- contact ---------- */
     .contact-box {
       background: var(--paper-2); border: 1px solid var(--rule); border-radius: 16px;
       padding: 34px 36px; display: flex; justify-content: space-between;
@@ -356,7 +339,6 @@
     .clink.primary:hover { background: var(--brass); border-color: var(--brass); }
     .clink svg { width: 16px; height: 16px; }
 
-    /* ---------- footer ---------- */
     footer {
       padding: 30px 0 46px; font: 400 13px var(--font-mono); color: var(--muted);
       display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
@@ -365,7 +347,6 @@
     footer a { color: var(--ink-soft); text-decoration: none; }
     footer a:hover { color: var(--brass); }
 
-    /* ---------- reveal animation ---------- */
     .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.in { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) {
@@ -393,9 +374,7 @@
 
 <main class="page" id="top">
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
+  <!-- HERO -->
   <section class="hero" aria-label="Introduction" style="border-bottom:0;">
     <div class="hero-photo-wrap">
       <img class="hero-img" src="photo.jpg" width="625" height="820" alt="Portrait of Priyanshi Kumari">
@@ -435,17 +414,13 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       INTRO STRIP
-       ============================================================ -->
+  <!-- INTRO STRIP -->
   <div class="intro reveal">
     <span class="greet">Hey Voila!</span>
     <p>I build AI systems that stay <em>stable</em>, <em>efficient</em> and <em>useful</em> outside the lab — from quantum algorithms to medical imaging to greenhouse control. Currently seeking research internships.</p>
   </div>
 
-  <!-- ============================================================
-       ABOUT
-       ============================================================ -->
+  <!-- ABOUT -->
   <section id="about" aria-labelledby="about-h">
     <div class="sec-head">
       <h2 id="about-h"><span class="num">01</span>About</h2>
@@ -466,9 +441,7 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       PUBLICATIONS
-       ============================================================ -->
+  <!-- PUBLICATIONS -->
   <section id="publications" aria-labelledby="pub-h">
     <div class="sec-head">
       <h2 id="pub-h"><span class="num">02</span>Publications</h2>
@@ -506,4 +479,245 @@
           <p class="p-title">An Intelligent Approach for Predicting Precision Machining of Wire EDM Process Using Machine Learning</p>
           <p class="p-authors">Shahana Bano, Priyanshi Kumari, Priyanshu Mishra, Taimoor Asim, Muhammad Younas</p>
           <p class="p-venue"><strong>JMMP</strong></p>
-          <p class="p-links"><a href="https://scholar.google.com
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge acc">Accepted</span>
+      </li>
+      <li class="pub" data-status="acc">
+        <div>
+          <p class="p-title">Empowering Sustainable Vertical Farming Through IoT and AI-Driven Technologies: A Technical Blueprint with Insights from the UK and India</p>
+          <p class="p-authors">Priyanshi Kumari, Razia Sulthana Abdul Kareem</p>
+          <p class="p-venue"><strong>Ecological Informatics</strong></p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge acc">Accepted</span>
+      </li>
+      <li class="pub" data-status="acc">
+        <div>
+          <p class="p-title">Machine learning for women's health: detecting breast cancer and PCOS</p>
+          <p class="p-venue">AHFE International Conference on Applied Human Factors and Ergonomics (poster)</p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge acc">Accepted</span>
+      </li>
+      <li class="pub" data-status="acc">
+        <div>
+          <p class="p-title">Dynamic Resource Allocation using Quantum Algorithm and Game Theoretic Approach</p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge acc">Published</span>
+      </li>
+
+      <!-- Under review -->
+      <li class="pub" data-status="rev">
+        <div>
+          <p class="p-title">An Open-Source Interactive Processor and Dual-Branch Fusion Model for Sentinel-2 Land-Suitability Mapping</p>
+          <p class="p-authors">Priyanshi Kumari, Razia Sulthana Abdul Kareem</p>
+          <p class="p-venue">AAAI IAAI-27 (Thirty-Ninth Annual Conference on Innovative Applications of Artificial Intelligence)</p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge rev">Under review</span>
+      </li>
+      <li class="pub" data-status="rev">
+        <div>
+          <p class="p-title">Quantum neural network for lung nodule detection</p>
+          <p class="p-venue"><strong>Quantum Machine Intelligence</strong></p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge rev">Under review</span>
+      </li>
+      <li class="pub" data-status="rev">
+        <div>
+          <p class="p-title">Reinforcement learning for greenhouse climate control and optimization</p>
+          <p class="p-venue">With Dr Shahana Bano, Robert Gordon University</p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge rev">Under review</span>
+      </li>
+      <li class="pub" data-status="rev">
+        <div>
+          <p class="p-title">An open-source Python package for satellite imagery using quantum algorithms</p>
+          <p class="p-venue">ICPRAM 2027</p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge rev">Under review</span>
+      </li>
+
+      <!-- Submitted -->
+      <li class="pub" data-status="sub">
+        <div>
+          <p class="p-title">Physics-Aware Port-Hamiltonian Graph Neural Controlled Differential Equations for Stable Student Stress Forecasting</p>
+          <p class="p-venue">ICASSP 2026</p>
+          <p class="p-links"><a href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar →</a></p>
+        </div>
+        <span class="tag-badge sub">Submitted</span>
+      </li>
+    </ul>
+
+    <p style="margin-top:24px;">
+      <a class="btn solid" href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">View all on Google Scholar</a>
+    </p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" aria-labelledby="exp-h">
+    <div class="sec-head">
+      <h2 id="exp-h"><span class="num">03</span>Research Experience</h2>
+      <span class="hint">// labs &amp; internships</span>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item current">
+        <p class="tl-when">Apr 2026 – Sep 2026</p>
+        <p class="tl-org">University of Cambridge</p>
+        <p class="tl-role">Research Intern</p>
+        <p class="tl-desc">Representation learning for early prediction of cancer in women.</p>
+      </div>
+      <div class="tl-item current">
+        <p class="tl-when">Jun 2026 – Aug 2026</p>
+        <p class="tl-org">QRACE – Quantum Research and Centre of Excellence</p>
+        <p class="tl-role">Quantum Research Intern</p>
+        <p class="tl-desc">Proposed a new quantum algorithm for NP-hard combinatorial problems.</p>
+      </div>
+      <div class="tl-item current">
+        <p class="tl-when">Oct 2025 – present</p>
+        <p class="tl-org">Robert Gordon University</p>
+        <p class="tl-role">Research Intern · Dr Shahana Bano</p>
+        <p class="tl-desc">Causal inference for WAAM, physics-based optimization for EDM, and reinforcement learning for greenhouse climate control.</p>
+      </div>
+      <div class="tl-item current">
+        <p class="tl-when">Sep 2025 – present</p>
+        <p class="tl-org">University of Greenwich</p>
+        <p class="tl-role">Research Intern · Dr Razia Sulthana</p>
+        <p class="tl-desc">Lightweight medical imaging, quantum algorithms for satellite imagery and lung nodule detection, AI-enabled vertical farming.</p>
+      </div>
+      <div class="tl-item current">
+        <p class="tl-when">Ongoing</p>
+        <p class="tl-org">IIT Kharagpur</p>
+        <p class="tl-role">Research · Dr Ritesh Sarkhel</p>
+        <p class="tl-desc">Self-playing agents and learning-based approaches for intelligent agent systems.</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-when">Jun 2025 – Oct 2025</p>
+        <p class="tl-org">Thirsty Swan AI Labs, Hyderabad</p>
+        <p class="tl-role">Research Intern · Dr Prudviraj</p>
+        <p class="tl-desc">Vision-language models with knowledge-graph tracking to identify disease symptoms from images extracted from arXiv papers using OCR.</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-when">May 2025 – Sep 2025</p>
+        <p class="tl-org">University of Kent, Kent and Medway Medical School</p>
+        <p class="tl-role">Undergraduate Research Collaborator · Dr Zhongtian Sun, Dr Chee Siang Ang</p>
+        <p class="tl-desc">Physics-informed networks for student mental health prediction on the Dartmouth student life dataset. The model stayed stable in long-horizon rollouts while non-physics-informed baselines diverged; benchmarked against GRU, GCN and GAT.</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-when">Dec 2024 – May 2025</p>
+        <p class="tl-org">NIT Jamshedpur</p>
+        <p class="tl-role">Research Intern · Dr Diwakar Tripathi</p>
+        <p class="tl-desc">Machine learning for women's health: breast cancer and PCOS.</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-when">Jun 2024 – Apr 2025</p>
+        <p class="tl-org">University of Kentucky</p>
+        <p class="tl-role">Research Intern · Dr Christopher Crawford</p>
+        <p class="tl-desc">Designed a trapezoidal filter from convolutions of existing filters; implemented in Verilog on the Red Pitaya FPGA and in NumPy.</p>
+      </div>
+      <div class="tl-item">
+        <p class="tl-when">May 2024 – Jun 2024</p>
+        <p class="tl-org">Grade Up Assignment</p>
+        <p class="tl-role">Subject Matter Expert</p>
+        <p class="tl-desc">Trained 1,000+ students in data structures, algorithms and competitive programming.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" aria-labelledby="edu-h">
+    <div class="sec-head">
+      <h2 id="edu-h"><span class="num">04</span>Education</h2>
+      <span class="hint">// where i studied</span>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <p class="e-when">2023 – 2027</p>
+        <p class="e-org">KIIT – Kalinga Institute of Industrial Technology</p>
+        <p class="e-role">B.Tech, Computer Science and Engineering · Minor in Quantum Computing</p>
+      </div>
+      <div class="edu-card">
+        <p class="e-when">2021 – 2023</p>
+        <p class="e-org">DAV Public School, Bistupur, Jamshedpur</p>
+        <p class="e-role">Std 12 · Physics, Chemistry, Mathematics, Biology</p>
+      </div>
+      <div class="edu-card">
+        <p class="e-when">2008 – 2021</p>
+        <p class="e-org">Sacred Heart Convent School, Jamshedpur</p>
+        <p class="e-role">Std 10</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONORS -->
+  <section id="honors" aria-labelledby="hon-h">
+    <div class="sec-head">
+      <h2 id="hon-h"><span class="num">05</span>Honors &amp; Skills</h2>
+      <span class="hint">// awards &amp; certifications</span>
+    </div>
+    <div class="honors reveal">
+      <div class="honor-item"><span class="mark">★</span><span>Best Paper in Session, IEEE IMSA Conference, Giza, Egypt (and Certificate of Appreciation)</span></div>
+      <div class="honor-item"><span class="mark">★</span><span>Tata Steel Millennium Scholarship, 2024</span></div>
+      <div class="honor-item"><span class="mark">★</span><span>Semi-finalist, EY Techathon 6.0 · Flipkart Runway Season 5</span></div>
+      <div class="honor-item"><span class="mark">★</span><span>Prabhat Khabar Pratibha Samman for performance in classes 10 and 12</span></div>
+      <div class="honor-item"><span class="mark">⚙</span><span>GIAC Python Coder (GPYC) · Health Systems Development: Introduction to Health Systems</span></div>
+      <div class="honor-item"><span class="mark">⚙</span><span>Skills: Quantum Computing, Game Development, Weka</span></div>
+      <div class="honor-item"><span class="mark">⚙</span><span>Languages: English (full professional), Hindi (native), German (elementary)</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="con-h" style="border-bottom:0; padding-bottom:20px;">
+    <div class="contact-box reveal">
+      <div>
+        <h2 id="con-h">Let's collaborate</h2>
+        <p>Open to research internships and collaborations in AI/ML. Reach out via email or any of the links below.</p>
+      </div>
+      <div class="contact-links">
+        <a class="clink primary" href="mailto:priyanshi140011@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+          Email me
+        </a>
+        <a class="clink" href="https://www.linkedin.com/in/priyanshikumari-ab22242b3" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="clink" href="https://github.com/Priyuan" target="_blank" rel="noopener">GitHub</a>
+        <a class="clink" href="https://scholar.google.com/citations?user=3JLa34oAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Priyanshi Kumari</span>
+    <span>Made with care · <a href="#top">Back to top ↑</a></span>
+  </footer>
+
+</main>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Publication filter
+  const filterBtns = document.querySelectorAll('.pub-filter button');
+  const pubs = document.querySelectorAll('.pub');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      pubs.forEach(p => {
+        p.style.display = (f === 'all' || p.dataset.status === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
