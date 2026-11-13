@@ -24,7 +24,8 @@
     /* ============================================================
        AARUSH-INSPIRED TEMPLATE
        Terminal / monospace aesthetic, dark-first, query header,
-       updates feed, minimal typography.
+       updates feed, minimal typography. Portrait photo cropped
+       to a head-to-stomach outline.
        ============================================================ */
     :root {
       --bg: #0a0a0a;
@@ -118,29 +119,46 @@
     p:last-child { margin-bottom: 0; }
     p strong { color: var(--ink); font-weight: 600; }
 
-    /* ---------- photo ---------- */
+    /* ---------- portrait photo (head to stomach) ---------- */
     .hero-row {
       display: flex;
-      gap: 28px;
+      gap: 32px;
       align-items: flex-start;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
       flex-wrap: wrap;
     }
-    .hero-photo {
-      width: 132px;
+    .portrait-wrap {
+      width: 160px;
       flex-shrink: 0;
+      position: relative;
+    }
+    .portrait-frame {
+      width: 100%;
+      /* portrait outline: head to stomach — taller than wide */
+      aspect-ratio: 3 / 4;
       border: 1px solid var(--rule);
-      border-radius: 2px;
+      border-radius: 4px;
       overflow: hidden;
       background: var(--surface);
+      box-shadow: 0 6px 24px -12px rgba(0, 0, 0, 0.45);
     }
-    .hero-photo img {
+    .portrait-frame img {
       width: 100%;
-      aspect-ratio: 35 / 45;
+      height: 100%;
       object-fit: cover;
-      object-position: center top;
+      /* centre on the face; show down to the stomach */
+      object-position: center 18%;
       display: block;
-      filter: grayscale(12%);
+      filter: grayscale(8%);
+    }
+    .portrait-caption {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      margin: 8px 0 0;
     }
     .hero-text { flex: 1; min-width: 240px; }
 
@@ -360,7 +378,7 @@
 </head>
 <body>
 
-<main class="page">
+<main class="page" id="top">
 
   <!-- ============================================================
        HEADER — query aesthetic
@@ -372,14 +390,17 @@
   </header>
 
   <!-- ============================================================
-       ABOUT
+       ABOUT — portrait cropped head-to-stomach
        ============================================================ -->
   <section id="about" class="reveal">
     <h2>about</h2>
 
     <div class="hero-row">
-      <div class="hero-photo">
-        <img src="photo.jpg" width="625" height="820" alt="Portrait of Priyanshi Kumari">
+      <div class="portrait-wrap">
+        <div class="portrait-frame">
+          <img src="photo.jpg" width="625" height="820" alt="Portrait of Priyanshi Kumari, head to stomach">
+        </div>
+        <p class="portrait-caption">Priyanshi</p>
       </div>
       <div class="hero-text">
         <p>I am a final-year Computer Science undergraduate at <strong>KIIT University</strong>, with a Minor in Quantum Computing. I research AI and Machine Learning across computer vision, reinforcement learning, physics-informed learning, and healthcare AI.</p>
